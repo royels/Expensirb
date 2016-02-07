@@ -1,13 +1,13 @@
 # coding: utf-8
 lib = File.expand_path('../lib', __FILE__)
 $LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
-require 'Expensirb/version'
+require 'expensirb/version'
 
 Gem::Specification.new do |spec|
-  spec.name          = "Expensirb"
+  spec.name          = "expensirb"
   spec.version       = Expensirb::VERSION
   spec.authors       = ["royels"]
-  spec.email         = ["docmentz@gmail.com"]
+  spec.email         = ["ryelsang@ucsd.edu"]
   spec.summary       = %q{TODO: Write a short summary. Required.}
   spec.description   = %q{TODO: Write a longer description. Optional.}
   spec.homepage      = ""
