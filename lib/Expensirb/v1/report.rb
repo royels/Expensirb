@@ -1,6 +1,4 @@
 class Report
-
-
   def export
 
   end
