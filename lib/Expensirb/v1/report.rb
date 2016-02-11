@@ -1,6 +1,7 @@
 class Report
-  def export
 
+
+  def export
 
   end
 

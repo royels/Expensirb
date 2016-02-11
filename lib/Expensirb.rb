@@ -11,6 +11,7 @@ module Expensirb
   end
 
   def self.submit(method, url, options={})
+    RestClient(:method, url, options)
 
   end
 
