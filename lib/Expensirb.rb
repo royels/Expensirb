@@ -5,23 +5,21 @@ require 'uri'
 require '../lib/expensirb/errors/error'
 
 module Expensirb
-  class << self
-    attr_accessor :api_key, :protocol, :api_url
 
+  def report
+    Expensirb::Report.new
   end
 
-  def self.submit(method, url, options={})
-    RestClient(:method, url, options)
-
+  def employee
+    Expensirb::Employee.new
   end
 
-
-
-  def Expensirb(options={})
-    options[:api_key] ||= Expensirb.api_key || ""
-    options[:api_url] ||= Expensirb.api_url || "https://integrations.expensify.com/Integration-Server/ExpensifyIntegrations"
+  def policy
+    Expensirb::Policy.new
   end
 
+  def expense
+    Expensirb::Expense.new
+  end
 
-  return Expensirb::Handler.new(options)
 end

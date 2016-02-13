@@ -1,15 +1,25 @@
-class Report
-  def export
-
-  end
+module Expensirb
+  class Report
 
 
-  def create
+    def export_post(options={})
 
-  end
+    end
+    private
+
+    def export(options={})
+      Expensirb.make_request()
+    end
 
 
-  def status_update
+    def create(requestJobDescription, template)
+
+    end
+
+
+    def status_update(requestJobDescription, template)
+
+    end
 
   end
 end

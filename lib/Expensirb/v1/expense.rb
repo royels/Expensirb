@@ -1,2 +1,4 @@
-class Expense
+module Expensirb
+  class Expense
+  end
 end
