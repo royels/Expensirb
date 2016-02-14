@@ -1,2 +1,5 @@
-class Employee
+
+module Expensirb
+  class Employee
+  end
 end

@@ -1,7 +1,9 @@
 module Expensirb
-  CREDENTIALS = {
-    partnerUSerID => "",
-    partnerUserSecret => ""
-  }
-  API_URL = "https://integrations.expensify.com/Integration-Server/ExpensifyIntegrations"
+  module Constants
+    CREDENTIALS = {
+        partnerUSerID => "",
+        partnerUserSecret => ""
+    }
+    API_URL = "https://integrations.expensify.com/Integration-Server/ExpensifyIntegrations"
+  end
 end
