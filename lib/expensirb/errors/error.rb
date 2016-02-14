@@ -1,2 +1,4 @@
-class Error
+module Expensirb
+class ExpensirbError
+end
 end
