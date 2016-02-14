@@ -48,16 +48,46 @@ module Expensirb
 
 
 
-      Expensirb.make_request(method, final_json)
+      Expensirb.make_request method, Expensirb::Constants::API_URL, final_json
     end
 
     def create(method, opts={})
+      requestJobDescription = {}
+      requestJobDescription[:type] = "create"
+      requestJobDescription[:credentials] = Expensirb::Constants::CREDENTIALS
 
+
+      # inputSettings
+      inputSettings = {}
+      inputSettings[:type] = "report"
+      inputSettings[:employeeEmail] = opts[:employeeEmail]
+      inputSettings[:report] = opts[:report]
+      inputSettings[:expenses] = opts[:expenses]
+      inputSettings[:policyID] = opts[:policyID]
+
+      requestJobDescription[:inputSettings] = inputSettings
+
+      final_json = requestJobDescription.to_json
+      Expensirb.make_request method, Expensirb::Constants::API_URL, final_json
     end
 
 
     def status_update(method, opts={})
+      requestJobDescription = {}
+      requestJobDescription[:type] = "update"
+      requestJobDescription[:credentials] = Expensirb::Constants::CREDENTIALS
 
+
+
+      # inputSettings
+      inputSettings = {}
+      inputSettings[:type] = "reportStatus"
+      inputSettings[:filters] = opts[:filters]
+      inputSettings[:status] = opts[:status]
+      requestJobDescription[:inputSettings] = inputSettings
+
+      final_json = requestJobDescription.to_json
+      Expensirb.make_request method, Expensirb::Constants::API_URL, final_json
     end
 
   end
