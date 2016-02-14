@@ -90,5 +90,18 @@ module Expensirb
       Expensirb.make_request method, Expensirb::Constants::API_URL, final_json
     end
 
+
+
+
+    def download(method, opts={})
+      requestJobDescription = {}
+      requestJobDescription[:type] = "download"
+      requestJobDescription[:credentials] = Expensirb::Constants::CREDENTIALS
+      requestJobDescription[:fileName] = opts[:fileName]
+
+      final_json = requestJobDescription.to_json
+
+      Expensirb.make_request method, Expensirb::Constants::API_URL, final_json
+    end
   end
 end
