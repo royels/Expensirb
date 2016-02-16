@@ -1,7 +1,6 @@
 # Expensirb
 
-I built this by observing and learning from design decisions in the [lob-ruby](https://github.com/lob/lob-ruby) repository,
-except implemented instead for the Expensify reporting API.
+I built this by observing and learning from design decisions in other public API's.
 
 ## Installation
 
