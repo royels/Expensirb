@@ -1,6 +1,6 @@
 # Expensirb
 
-I built this by observing and learning from design decisions in other public API's.
+I built this by observing and learning from design decisions in other public APIs' Ruby libraries.
 
 ## Installation
 
